@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tackus's Website</title>
+
+  <style>
+    :root {
+      --bg: #0f1511;
+      --surface: #16201a;
+      --surface-2: #1b2a21;
+      --primary: #4ade80;
+      --primary-dark: #22c55e;
+      --text: #e6f4ea;
+      --muted: #9fb8a7;
+      --radius: 20px;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      border: 1px solid rgba(74, 222, 128, 0.15);
+      transition: transform 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+    }
+
+    h1, h2 {
+      margin: 0 0 8px;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+    }
+
+    button {
+      margin-top: 12px;
+      background: var(--primary);
+      border: none;
+      padding: 10px 16px;
+      border-radius: 999px;
+      color: #003314;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    button:hover {
+      background: var(--primary-dark);
+    }
+
+    button:active {
+      transform: scale(0.96);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* LIGHT MODE */
+    .light {
+      --bg: #f1f8f4;
+      --surface: #ffffff;
+      --surface-2: #e6f4ea;
+      --text: #0f1a13;
+      --muted: #4b6354;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="card">
+    <h1>👋 Tackus</h1>
+    <p>Enjoying Manjaro Linux on main PC - and - Playing with old OSes</p>
+    <header>
+     <button onclick="toggleTheme()">Toggle theme</button>
+     <button onclick="contactMe()">Contact</button>
+    </header>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h2>💻 System i use on...</h2>
+        <p>...main PC - Manjaro Linux</p>
+        <p>...laptop - Fedora Linux</p>
+        <p>...another laptop - Windows 10 Home</p>
+    </div>
+
+    <div class="card">
+      <h2>📱 Devices</h2>
+      <ul>
+        <li>Microsoft Lumia 950</li>
+        <li>Google Pixel 9 (main)</li>
+        <li>Huawei P9 Lite ×2</li>
+        <li>Samsung S3 + Tab S4</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🌐 Links</h2>
+      <p><a href="#nothing">Website</a></p>
+      <p><a href="https://youtube.com/@tackushackus">YouTube</a></p>
+      <p><a href="https://www.tiktok.com/@tackushackus">TikTok</a></p>
+      <p><a href="https://appteka.store/profile/540242">AppTeka</a></p>
+      <p><a href="https://github.com/TackusHackus">GitHub</a></p>
+      <p><a href="https://www.twitch.tv/tackusgaming">Twitch</a></p>
+      <p><a href="https://www.reddit.com/user/TackusHackus/">Reddit</a></p>
+    </div>
+
+    <div class="card">
+      <h2>🧠 About</h2>
+      <p>Hey, im TackusHackus (Known as: TacekHacek, Tackus)! I love making stupid things, Discord bots, Minecraft servers playing with my Lumia 950 (Windows 10 Mobile). My favorite Git website is GitLab but im here because... GitHub is more popular</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle("light");
+  }
+  function contactMe() {
+    window.location.href = "https://tackushackus.github.io#notAvailable";
+  }
+</script>
+
+</body>
+</html>
